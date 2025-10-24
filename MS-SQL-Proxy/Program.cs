@@ -6,9 +6,9 @@ namespace MS_SQL_Proxy;
 // socat TCP-LISTEN:1433,fork TCP:192.168.1.32:2022
 class Program
 {
-    static System.Threading.CancellationTokenSource cts = new System.Threading.CancellationTokenSource();
+    private static System.Threading.CancellationTokenSource cts = new System.Threading.CancellationTokenSource();
     
-    static async System.Threading.Tasks.Task<int> Main(string[] args)
+    private static async System.Threading.Tasks.Task<int> Main(string[] args)
     {
         System.Console.CancelKeyPress += (s, e) =>
         {
